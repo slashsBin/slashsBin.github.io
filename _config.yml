@@ -1,5 +1,5 @@
 name: /sBin
-markdown: redcarpet
-pygments: true
 safe: true
+lsi: false
+pygments: true
 timezone: Asia/Tehran
