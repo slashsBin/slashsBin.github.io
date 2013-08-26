@@ -161,6 +161,12 @@ pre {
 	   -moz-border-radius: 10px;
 	        border-radius: 10px;
     }
+#forkMe img {
+	position: absolute;
+	top: 16px;
+	right: 0;
+	border: 0;
+    }
 
 #body {
 	height: 100%;
