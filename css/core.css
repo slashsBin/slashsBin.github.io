@@ -18,7 +18,7 @@ body {
 	background-repeat: repeat;
     }
 
-a, a:active, a:visited, a:focus { color: inherit; text-decoration: underline; -webkit-text-decoration-color: #A0; -moz-text-decoration-color: #A0; text-decoration-color: #A0; -webkit-text-decoration-style: dashed; -moz-text-decoration-style: dashed; text-decoration-style: dashed; }
+a, a:active, a:visited, a:focus { color: inherit; text-decoration: underline; -webkit-text-decoration-color: #A0A0A0; -moz-text-decoration-color: #A0; text-decoration-color: #A0; -webkit-text-decoration-style: dashed; -moz-text-decoration-style: dashed; text-decoration-style: dashed; }
 a:hover { color: blue; }
 ul { list-style: none; padding: 0; margin: 0; }
 li { padding: 0; margin: 0; }
