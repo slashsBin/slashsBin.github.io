@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE]> <html class="crapware"> <![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
 
 {% include figlet.html %}
 
@@ -13,11 +14,51 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|Ubuntu+Mono" />
 <link rel="stylesheet" href="/css/vendor/normalize.css">
 <link rel="stylesheet" href="/css/core.css">
+<!--[if !IE]><!-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="/js/vendor/raphael.min.js"></script>
 <script src="/js/core.js"></script>
+<!--<![endif]-->
 </head>
 <body>
+<!--[if IE]>
+<div id="bsod" class="crapware">
+<pre>
+A problem has been detected and windows has been shut down to prevent damage
+to your computer.
+
+The problem seems to be caused by the following file: IE-IS-A-<abbr title="Microsoft I.E">CRAPWARE</abbr>.SYS
+
+USER_FAULT_IN_BROWSER_AREA
+
+If this is the first time you've seen this stop error screen,
+restart your computer. If this screen appears again, you are using a <abbr title="Microsoft I.E">CRAPWARE</abbr>,
+follow these steps:
+
+Remove Internet Explorer, then install a <a href="http://browsehappy.com/" title="I.E is NOT a Browser">Browser</a> and restart your computer.
+
+Check to make sure any new hardware or software is properly installed.
+If this is a new installation, ask your hardware or software manufacturer
+for any windows updates you might need.
+
+If problems continue, disable or remove any newly installed hardware
+or software. Disable BIOS memory options such as caching or shadowing.
+If you need to use Safe Mode to remove or disable components, restart
+your computer, press F8 to select Advanced Startup Options, and then
+select Safe Mode.
+
+Technical Information:
+
+*** STOP: 0x0DEFACED (0xABABABAB,0xBAADFOOD,0xCDCDCDCD,0xBEEFCACE)
+
+***  IE-IS-A-<abbr title="Microsoft I.E">CRAPWARE</abbr>.SYS - Address DDDDDDDD base at CCCCCCCC, DateStamp FDFDFDFD
+</pre>
+</div>
+<![endif]-->
+<!--[if !IE]><!-->
+<div id="old-school" style="display: none;">
+<span>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</span>
+</div>
 <div id="header_companion">
     <div class="bgcolor1"></div><div class="bgcolor2"></div><div class="bgcolor3"></div><div class="bgcolor4"></div><div class="bgcolor5"></div><div class="bgcolor6"></div><div class="bgcolor7"></div><div class="bgcolor8"></div>
 </div>
@@ -34,6 +75,7 @@
         <li><a href="http://internetdefenseleague.org" title="Member of The Internet Defense League" target="_blank"><img src="http://internetdefenseleague.org/images/badges/final/shield_badge.png" alt="Internet Defense League" /></a></li>
     </ul>
 </div>
+
 <div id="sidebar">
     <ul>
     <li><a id="sidebar-cube" class="icon" data-icon="cube" data-icon-size-x="32" data-icon-size-y="32" href="#cube" title="Back 2 Cube!"></a></li>
@@ -53,6 +95,7 @@
     </div>
 </div>
 {% include footer.html %}
+<!--<![endif]-->
 </body>
 
 {% include binary.html %}

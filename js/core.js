@@ -57,10 +57,14 @@ $(function() {
 	var stg = $(this).find('#stage');
 	if( shp.hasClass('ring') ) {
 	    shp.removeClass('ring').data('icon-hover', false).addClass('cube');
-	    stg.css('webkitTransform', '');
+	    stg.css('webkitTransform', '')
+	    	  .css('mozTransform', '')
+	    	     .css('transform', '');
 	} else {
 	    shp.removeClass('cube').data('icon-hover', true).addClass('ring');
-	    stg.css('webkitTransform', 'translateZ(-200px)');
+	    stg.css('webkitTransform', 'translateZ(-200px)')
+	          .css('mozTransform', 'translateZ(-200px)')
+	             .css('transform', 'translateZ(-200px)');
 	}
 	return false;
     	});
@@ -84,11 +88,14 @@ $(function() {
 	if( undefined !== (mask = $(this).data('mask')) ) {
 	    $('#body #back-page.face .mask').removeClass('putOn').filter('#mask-' + mask).addClass('putOn');
 	    var bdy = $('#body');
-	    var shp = $('#front-core-container #shape');
+	    var fpage = bdy.find('#front-page');
+	    var shp = fpage.find('#front-core-container #shape');
 	    if( '1' == bdy.data('flip' ) ) {
+		    fpage.css('display', 'block');
 		    bdy.data('flip', '0' ).removeClass('flip');
 		    shp.removeClass('paused');
 		} else {
+		    fpage.css('display', 'none');
 		    bdy.data('flip', '1' ).addClass('flip');
 		    shp.addClass('paused');
 		}
@@ -98,7 +105,8 @@ $(function() {
     	});
     
     $('#sidebar #sidebar-cube').on('click', function() {
-	$('#front-core-container #shape').removeClass('paused');
+	$('#front-page').css('display', 'block')
+	.find('#front-core-container #shape').removeClass('paused');
 	$('#body').data('flip', '0').removeClass('flip')
 		.find('#back-page.face .mask').removeClass('putOn');
 	return false;
