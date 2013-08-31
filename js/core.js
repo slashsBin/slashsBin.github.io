@@ -104,11 +104,14 @@ $(function() {
 	return false;
     	});
     
-    $('#sidebar #sidebar-cube').on('click', function() {
+    $('#sidebar #sidebar-cube').on('click', function() {	    
 	$('#front-page').css('display', 'block')
-	.find('#front-core-container #shape').removeClass('paused');
+		.find('#front-core-container #shape').removeClass('paused ring').data('icon-hover', false).addClass('cube')
+		.find('#stage').css('webkitTransform', '')
+	    	  	       .css('mozTransform', '')
+	    	  	       .css('transform', '');
 	$('#body').data('flip', '0').removeClass('flip')
-		.find('#back-page.face .mask').removeClass('putOn');
+		  .find('#back-page.face .mask').removeClass('putOn');
 	return false;
     	});
     
