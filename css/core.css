@@ -121,10 +121,20 @@ pre {
 	top: 50%;
 	left: 0;
 	width: 32px;
-	height: 32px;
-	margin-top: -56px;
+	margin-top: -102px;
+        padding: 4px;
 	border-radius: 0 10px 10px 0;
 	z-index: 1000000000;
+    }
+#sidebar li {
+        width: 32px;
+        height: 32px;
+    }
+#sidebar li.sidebar-separator {
+        width: 28px;
+        height: 0;
+        border-bottom: 1px solid #C0C0C0;
+        margin: 2px;
     }
 #sidebar #sidebar-cube {
 	cursor: crosshair;
