@@ -113,8 +113,8 @@ $(function() {
     
     $('#sidebar #sidebar-cube').on('click', function() {	    
 	$('#front-page').css('display', 'block')
-		.find('#front-core-container #shape').removeClass('paused ring').data('icon-hover', false).addClass('cube')
-		.find('#stage').css('webkitTransform', '')
+		.find('#front-core-container #stage #shape').removeClass('paused ring').data('icon-hover', false).addClass('cube').end()
+		.find('#front-core-container #stage').css('webkitTransform', '')
 	    	  	       .css('mozTransform', '')
 	    	  	       .css('transform', '');
 	$('#body').data('flip', '0').removeClass('flip')
