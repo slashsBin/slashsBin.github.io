@@ -29,6 +29,10 @@ var iconAttr = {fill: '#000', stroke: 'none'};
 var paperz = {}, elz = {};
 
 $(function() {
+    $(document).on('contextmenu', function() {
+        return false;
+        });
+    
     $('.icon')
     .each(function() {
 	var id = $(this).attr('id'),
