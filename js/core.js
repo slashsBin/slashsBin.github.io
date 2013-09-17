@@ -59,7 +59,7 @@ $(function() {
 	}
     	});
     
-    $('#front-core-container').click(function() {
+    $('#front-core-container').on('click', function(e) {
 	var shp = $(this).find('#shape');
 	var stg = $(this).find('#stage');
 	if( shp.hasClass('ring') ) {
