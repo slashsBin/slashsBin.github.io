@@ -147,7 +147,7 @@ pre {
     top: 0;
     left: 0;
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
-    z-index: 100000000;
+    z-index: 1000000000;
     }
 #header_companion div {
     width: 12.5%;
@@ -202,7 +202,7 @@ pre {
 	top: 16px;
 	right: 0;
 	border: 0;
-	z-index: 10000000000;
+	z-index: 100000000;
     }
 
 #body {
