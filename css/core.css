@@ -569,6 +569,11 @@ pre {
 #mask-CV.mask ul.cloud li:not(:first-child):before {
 	content: "| ";
     }
+#mask-CV.mask .navigateTo.back2TOC {
+        padding-left: 2em;
+        text-decoration: none;
+        font-size: small;
+    }
 #mask-about.mask #avatar, #mask-contactMe.mask #QR {
 	float: right;
 	margin: 0 20px 20px;
