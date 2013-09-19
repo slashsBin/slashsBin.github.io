@@ -53,7 +53,7 @@ $(function() {
 	elz[id] = paperz[id].path(iconz[icn]).transform(icn_trnsfrm).attr(icn_attr);
     	})
     .on('mouseenter mouseleave', function(e) {
-	if( !$(this).parent().data('icon-hover') ) { return false; }
+	if( false === $(this).parent().data('iconHover') || false === $(this).data('iconHover') ) { return false; }
 	var id = $(this).attr('id');
         elz[id].stop();
 	if( 'mouseenter' === e.type ) {
@@ -67,12 +67,12 @@ $(function() {
 	var shp = $(this).find('#shape');
 	var stg = $(this).find('#stage');
 	if( shp.hasClass('ring') ) {
-	    shp.removeClass('ring').data('icon-hover', false).addClass('cube');
+	    shp.removeClass('ring').data('iconHover', false).addClass('cube');
 	    stg.css('webkitTransform', '')
 	    	  .css('mozTransform', '')
 	    	     .css('transform', '');
 	} else {
-	    shp.removeClass('cube').data('icon-hover', true).addClass('ring');
+	    shp.removeClass('cube').data('iconHover', true).addClass('ring');
 	    stg.css('webkitTransform', 'translateZ(-200px)')
 	          .css('mozTransform', 'translateZ(-200px)')
 	             .css('transform', 'translateZ(-200px)');
