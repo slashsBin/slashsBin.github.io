@@ -64,9 +64,12 @@ p { text-align: justify; -moz-text-align-last: center; -webkit-text-align-last: 
        -moz-animation-play-state: paused;
             animation-play-state: paused;
     }
+.inProgress { cursor: progress !important; }
+.wait { cursor: wait !important; }
 
 h1, h2, h3, h4, h5, h6 {
     color: rgb(96, 96, 96);
+    text-shadow: 0px 1px 1px #FFF;
     }
 code {
     color: blue;
@@ -84,29 +87,17 @@ pre {
     color: blue;
     }
 
+@keyframes spinAround {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+    }
 @-webkit-keyframes spinAround {
-    from {
-        -webkit-transform: rotate(0deg)
-         }
-    to   {
-        -webkit-transform: rotate(360deg);
-         }
+    from { -webkit-transform: rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg); }
     }
 @-moz-keyframes spinAround {
-    from {
-        -moz-transform: rotate(0deg)
-         }
-    to   {
-        -moz-transform: rotate(360deg);
-         }
-    }
-@keyframes spinAround {
-    from {
-        transform: rotate(0deg)
-         }
-    to   {
-        transform: rotate(360deg);
-         }
+    from { -moz-transform: rotate(0deg); }
+    to   { -moz-transform: rotate(360deg); }
     }
 
 #headline {
@@ -118,12 +109,16 @@ pre {
 #headline h1 {
     cursor: default;
     margin: 0;
-    font-size: 4em;
+    font-size: 8em;
     font-weight: normal;
     font-family: 'Iceberg', cursive;
+    line-height: 1em;
     }
 #headline h1:hover {
     color: blue;
+    }
+#headline span {
+    font-size: small;
     }
 
 #sidebar {
@@ -135,6 +130,7 @@ pre {
     margin-top: -102px;
     padding: 4px;
     border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
     z-index: 1000000000;
     }
 #sidebar li {
@@ -157,7 +153,7 @@ pre {
     position: fixed;
     top: 0;
     left: 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    box-shadow: 0 0 8px rgba(0,0,0,0.8);
     z-index: 1000000000;
     }
 #header_companion div {
@@ -176,6 +172,7 @@ pre {
     left: 0;
     height: 96px;
     width: 100%;
+    background-color: #000;
     background-image: url('/media/noise_footer.png');
     background-repeat: repeat;
     box-shadow: inset 0 -24px 48px rgba(0, 0, 0, 0.2), 0 -6px 0 rgba(0, 0, 0, 0.1);
@@ -276,33 +273,17 @@ pre {
     display: block;
     }
 
+@keyframes spin {
+    from { transform: rotateY(0); }
+    to   { transform: rotateY(-360deg); }
+    }
 @-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotateY(0);
-                transform: rotateY(0);
-        }
-    to  {
-        -webkit-transform: rotateY(-360deg);
-                transform: rotateY(-360deg);
-        }
+    from { -webkit-transform: rotateY(0); }
+    to   { -webkit-transform: rotateY(-360deg); }
     }
 @-moz-keyframes spin {
-    from {
-           -moz-transform: rotateY(0);
-                transform: rotateY(0);
-        }
-    to  {
-           -moz-transform: rotateY(-360deg);
-                transform: rotateY(-360deg);
-        }
-    }
-@keyframes spin {
-    from {
-                transform: rotateY(0);
-        }
-    to  {
-                transform: rotateY(-360deg);
-        }
+    from { -moz-transform: rotateY(0); }
+    to   { -moz-transform: rotateY(-360deg); }
     }
 
 #front-core-container {
@@ -379,7 +360,7 @@ pre {
     background-color: rgba(0, 0, 0, 0.2);
     -webkit-transition: -webkit-transform 2s, opacity 2s;
        -moz-transition: -moz-transform 2s, opacity 2s;
-            transition: transform 2s, opacity 8s;
+            transition: transform 2s, opacity 2s;
     -webkit-backface-visibility: visible;
        -moz-backface-visibility: visible;
             backface-visibility: visible;
@@ -511,52 +492,44 @@ pre {
             transform: rotateY(330deg) translateZ(380px);
     }
 
+@keyframes heartbeat {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.3); }
+    100% { transform: scale(1); }
+    }
 @-webkit-keyframes heartbeat {
-    0%   {
-        -webkit-transform: scale(1, 1);
-                transform: scale(1, 1);
-         }
-    50%  {
-        -webkit-transform: scale(1.2, 1.2);
-                transform: scale(1.2, 1.2);
-         }
-    100% {
-        -webkit-transform: scale(1, 1);
-                transform: scale(1, 1);
-         }
+    0%   { -webkit-transform: scale(1); }
+    50%  { -webkit-transform: scale(1.3); }
+    100% { -webkit-transform: scale(1); }
     }
 @-moz-keyframes heartbeat {
-    0%   {
-           -moz-transform: scale(1, 1);
-                transform: scale(1, 1);
-         }
-    50%  {
-           -moz-transform: scale(1.2, 1.2);
-                transform: scale(1.2, 1.2);
-         }
-    100% {
-           -moz-transform: scale(1, 1);
-                transform: scale(1, 1);
-         }
-    }
-@keyframes heartbeat {
-    0%   {
-                transform: scale(1, 1);
-         }
-    50%  {
-                transform: scale(1.2, 1.2);
-         }
-    100% {
-                transform: scale(1, 1);
-         }
+    0%   { -moz-transform: scale(1); }
+    50%  { -moz-transform: scale(1.3); }
+    100% { -moz-transform: scale(1); }
     }
 .heart {
     display: inline-block;
+    cursor: none;
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+       -moz-transform-origin: center center;
+                  transition: all 1s;
+    -webkit-animation-delay: 1s;
+       -moz-animation-delay: 1s;
+             animation-dely: 1s;
     -webkit-animation: heartbeat 1.5s infinite ease-in-out;
        -moz-animation: heartbeat 1.5s infinite ease-in-out;
-         -o-animation: heartbeat 1.5s infinite ease-in-out;
-        -ms-animation: heartbeat 1.5s infinite ease-in-out;
             animation: heartbeat 1.5s infinite ease-in-out;
+    }
+.heart:hover {
+    -webkit-transform: scale(2);
+       -moz-transform: scale(2);
+            transform: scale(2);
+    -webkit-animation: '';
+       -moz-animation: none;
+            animation: '';
     }
 
 .mask ul {

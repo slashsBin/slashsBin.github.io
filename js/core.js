@@ -29,6 +29,8 @@ var iconAttr = {fill: '#000', stroke: 'none'};
 var paperz = {}, elz = {};
 
 $(function() {
+    $('body').removeClass('wait');
+    
     $(document).on('contextmenu', function() {
         return false;
         });
@@ -63,7 +65,7 @@ $(function() {
 	}
     	});
     
-    $('#front-core-container').on('click', function(e) {
+    $('#front-core-container').removeClass('wait').on('click', function(e) {
 	var shp = $(this).find('#shape');
 	var stg = $(this).find('#stage');
 	if( shp.hasClass('ring') ) {
@@ -114,6 +116,8 @@ $(function() {
 	
 	return false;
     	});
+        
+    $('#front-core-container').removeClass('inProgress')
     
     $('#sidebar #sidebar-cube').on('click', function() {	    
 	$('#front-page').css('display', 'block')
@@ -181,5 +185,6 @@ $(function() {
 	}
 	$(this).data('m', !M);
     	});
-    
+   
+    $('body').removeClass('inProgress');
 });
