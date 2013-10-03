@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--[if IE]> <html class="crapware"> <![endif]-->
-<!--[if !IE]><!--> <html> <!--<![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 
 {% include figlet.html %}
 
@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="author" content="Mohammad Shokri">
 <meta name="description" content="Personal Website of Mohammad Shokri">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="/sBin, Mohammad Shokri, Shokri, slashsBin, slash sBin, Software Engineer, cyberRoze, 0x004D44, cyberRoze.md">
 <title>/s&beta;in :: {{ page.title }}</title>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Code+Pro|Iceberg|Dawning+of+a+New+Day" />
 <link rel="stylesheet" type="text/css" href="/css/vendor/normalize.css">
 <link rel="stylesheet" type="text/css" href="/css/core.css">
 </head>
@@ -62,12 +63,12 @@ Technical Information:
         <span>Demystified with <code class="preserve">C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></code> &amp; <span class="heart">&#10084;</span></span>
     </div>
     <ul>
-        <li><a href="http://www.catb.org/~esr/faqs/hacker-howto.html" title="Hacker" target="_blank"><img src="http://www.catb.org/hacker-emblem/glider.png" alt="Hacker" /></a></li>
-        <li><a href="https://en.gravatar.com/mohammadshokri" title="Gravatar" target="_blank"><img src="http://www.gravatar.com/avatar/456abb344d5515fe4e18bbb62a2ebec6?s=55&d=identicon&f=y"  alt="Gravatar" /></a></li>
-        <li><a href="http://www.w3.org/TR/html5/" title="HTML5 Powered" target="_blank"><img src="http://www.w3.org/html/logo/downloads/HTML5_1Color_White.png" alt="HTML5 Powered" /></a></li>
-        <li><a href="http://careers.stackoverflow.com/slashsbin" title="Careers 2.0" target="_blank"><img src="http://cdn.sstatic.net/stackexchange/img/logos/careers/careers-icon.png" alt="Careers 2.0" /></a></li>
-        <li><a href="https://www.vizify.com/mohammad-shokri" title="Vizify" target="_blank"><img src="http://static.www.vizify.com/assets/vizumes/bdg/rrec128b.png" alt="Vizify" /></a></li>
-        <li><a href="http://internetdefenseleague.org" title="Member of The Internet Defense League" target="_blank"><img src="http://internetdefenseleague.org/images/badges/final/shield_badge.png" alt="Internet Defense League" /></a></li>
+        <li><a href="http://www.catb.org/~esr/faqs/hacker-howto.html" title="Hacker" target="_blank"><img hidden aria-src="http://www.catb.org/hacker-emblem/glider.png" alt="Hacker" /></a></li>
+        <li><a href="https://en.gravatar.com/mohammadshokri" title="Gravatar" target="_blank"><img hidden aria-src="http://www.gravatar.com/avatar/456abb344d5515fe4e18bbb62a2ebec6?s=55&d=identicon&f=y"  alt="Gravatar" /></a></li>
+        <li><a href="http://www.w3.org/TR/html5/" title="HTML5 Powered" target="_blank"><img hidden aria-src="http://www.w3.org/html/logo/downloads/HTML5_1Color_White.png" alt="HTML5 Powered" /></a></li>
+        <li><a href="http://careers.stackoverflow.com/slashsbin" title="Careers 2.0" target="_blank"><img hidden aria-src="http://cdn.sstatic.net/stackexchange/img/logos/careers/careers-icon.png" alt="Careers 2.0" /></a></li>
+        <li><a href="https://www.vizify.com/mohammad-shokri" title="Vizify" target="_blank"><img hidden aria-src="http://static.www.vizify.com/assets/vizumes/bdg/rrec128b.png" alt="Vizify" /></a></li>
+        <li><a href="http://internetdefenseleague.org" title="Member of The Internet Defense League" target="_blank"><img hidden aria-src="http://internetdefenseleague.org/images/badges/final/shield_badge.png" alt="Internet Defense League" /></a></li>
     </ul>
 </div>
 
@@ -80,6 +81,7 @@ Technical Information:
     <li><a id="sidebar-volume" class="icon" data-icon="volume3" data-icon-size-x="32" data-icon-size-y="32" data-icon-hover="false" data-volume="1" data-volume-level="3" href="#volume" title="Volume"></a></li>
     </ul>
 </div>
+<a id="forkMe" href="https://github.com/slashsBin/slashsBin.github.io" target="_blank"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <div id="body">
     <div id="back-page" class="face">
         <div id="mask-projects" class="mask">{% include mask.projects.html %}</div>
@@ -93,9 +95,11 @@ Technical Information:
     {{ content }}
     </div>
 </div>
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Code+Pro|Iceberg|Dawning+of+a+New+Day" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<audio id="rainy-mood" preload="none" loop hidden>
+    <source src="http://174.36.223.28/audio1104/RainyMood.ogg" type="audio/ogg" />
+</audio>
 <script src="/js/core.js"></script>
 {% include footer.html %}
 <!--<![endif]-->

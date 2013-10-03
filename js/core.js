@@ -159,6 +159,14 @@ $(function() {
         return false;
         });
     
+    $('#footer ul li a img')
+    .on('load', function() {
+        $(this).removeAttr('hidden');
+        })
+    .each(function() {
+        $(this).attr('src', $(this).attr('aria-src'));
+        });
+    
     $('.eMail').on('click', function() {
 	var w = 500, h = 300, t = 0, l = 0;
 	l = (screen.width  - w)/2;

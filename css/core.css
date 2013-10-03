@@ -109,7 +109,7 @@ pre {
 #headline h1 {
     cursor: default;
     margin: 0;
-    font-size: 8em;
+    font-size: 4em;
     font-weight: normal;
     font-family: 'Iceberg', cursive;
     line-height: 1em;
@@ -194,13 +194,20 @@ pre {
 #footer ul li {
     display: inline-block;
     margin: 0 16px;
+    width: 55px;
+    height: 55px;
     }
 #footer ul li:hover {
     -webkit-animation: spinAround 2s linear infinite;
        -moz-animation: spinAround 2s linear infinite;
             animation: spinAround 2s linear infinite;
     }
-#footer ul li img {
+#footer ul li a {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    }
+#footer ul li a img {
     width: 55px;
     height: 55px;
     -webkit-border-radius: 10px;
