@@ -25,7 +25,7 @@ sun: 'M15.502,7.504c-4.35,0-7.873,3.523-7.873,7.873c0,4.347,3.523,7.872,7.873,7.
 	};
 
 var cmdBaseUri = '#!cyberRoze.md';
-var iconAttr = {fill: '#000', stroke: 'none'};
+var iconAttr = {fill: '#E0E0E0', stroke: 'none'};
 var paperz = {}, elz = {};
 
 $(function() {
@@ -59,7 +59,7 @@ $(function() {
 	var id = $(this).attr('id');
         elz[id].stop();
 	if( 'mouseenter' === e.type ) {
-	    elz[id].animate({stroke: 'white', 'stroke-width': 1}).animate({fill: 'blue'}, 500);
+	    elz[id].animate({stroke: '#FFF', 'stroke-width': 4}).animate({fill: '#000'}, 500);
 	} else {
 	    elz[id].animate(iconAttr);
 	}
@@ -117,7 +117,7 @@ $(function() {
 	return false;
     	});
         
-    $('#front-core-container').removeClass('inProgress')
+    $('#front-core-container').removeClass('inProgress');
     
     $('#sidebar #sidebar-cube').on('click', function() {	    
 	$('#front-page').css('display', 'block')

@@ -31,7 +31,7 @@ html.crapware #bsod.crapware pre {
     }
 
 html {
-    color: #222;
+    color: #E0E0E0;
     height: 100%;
     }
 
@@ -45,7 +45,7 @@ body {
     }
 
 a, a:active, a:visited, a:focus { color: inherit; text-decoration: underline; -webkit-text-decoration-color: #A0A0A0; -moz-text-decoration-color: #A0A0A0; text-decoration-color: #A0A0A0; -webkit-text-decoration-style: dashed; -moz-text-decoration-style: dashed; text-decoration-style: dashed; }
-a:hover { color: blue; }
+a:hover { color: #40A0FF; }
 ul { list-style: none; padding: 0; margin: 0; }
 li { padding: 0; margin: 0; }
 p { text-align: justify; -moz-text-align-last: center; -webkit-text-align-last: center; text-align-last: center; text-indent: 2em; }
@@ -68,11 +68,12 @@ p { text-align: justify; -moz-text-align-last: center; -webkit-text-align-last: 
 .wait { cursor: wait !important; }
 
 h1, h2, h3, h4, h5, h6 {
-    color: rgb(96, 96, 96);
-    text-shadow: 0px 1px 1px #FFF;
+    color: rgb(192,192,192);
+    text-shadow: 0px 1px 1px #000;
+    letter-spacing: 4px;
     }
-code {
-    color: blue;
+code:hover {
+    color: #40A0FF;
     }
 code.preserve {
     color: inherit;
@@ -82,9 +83,11 @@ pre {
     }
 .name {
     font-family: 'Dawning of a New Day', cursive;
+    font-size: xx-large;
+    letter-spacing: 0;
     }
 .name:hover {
-    color: blue;
+    color: #40A0FF;
     }
 
 @keyframes spinAround {
@@ -107,6 +110,7 @@ pre {
     z-index: 1000000000;
     }
 #headline h1 {
+    color: #FFF;
     cursor: default;
     margin: 0;
     font-size: 4em;
@@ -115,19 +119,21 @@ pre {
     line-height: 1em;
     }
 #headline h1:hover {
-    color: blue;
+    color: #40A0FF;
     }
 #headline span {
     font-size: small;
+    text-shadow: 0px 1px 1px #000;
+    letter-spacing: 2px;
     }
 
 #sidebar {
-    background-color: rgb(224,224,224);
     position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
     top: 50%;
     left: 0;
     width: 32px;
-    margin-top: -102px;
+    margin-top: -118px;
     padding: 4px;
     border-radius: 0 10px 10px 0;
     box-shadow: 0 0 8px rgba(0,0,0,0.4);
@@ -136,12 +142,14 @@ pre {
 #sidebar li {
     width: 32px;
     height: 32px;
+    padding: 8px 0;
     }
 #sidebar li.sidebar-separator {
     width: 28px;
     height: 0;
     border-bottom: 1px solid #C0C0C0;
     margin: 2px;
+    padding: 0;
     }
 #sidebar #sidebar-cube {
     cursor: crosshair;
@@ -172,9 +180,7 @@ pre {
     left: 0;
     height: 96px;
     width: 100%;
-    background-color: #000;
-    background-image: url('/media/noise_footer.png');
-    background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 0.4);
     box-shadow: inset 0 -24px 48px rgba(0, 0, 0, 0.2), 0 -6px 0 rgba(0, 0, 0, 0.1);
     z-index: 100000000;
     }
@@ -183,7 +189,11 @@ pre {
     right: 32px;
     height: 96px;
     line-height: 96px;
+    letter-spacing: 4px;
     text-align: right;
+    }
+#footer #info:hover {
+    color: #FFF;
     }
 #footer ul {
     position: absolute;
@@ -213,9 +223,18 @@ pre {
     -webkit-border-radius: 10px;
        -moz-border-radius: 10px;
             border-radius: 10px;
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+            filter: grayscale(100%);
     }
+#footer ul li:hover a img {
+    -webkit-filter: grayscale(100%) invert(100%);
+       -moz-filter: grayscale(100%) invert(100%);
+            filter: grayscale(100%) invert(100%);
+    }
+
 #forkMe {
-    position: absolute;
+    position: fixed;
     top: 16px;
     right: 0;
     border: 0;
@@ -354,17 +373,17 @@ pre {
     position: absolute;
     height: 200px;
     width: 200px;
-    border: 1px solid white;
-    -webkit-border-radius: 12px;
-       -moz-border-radius: 12px;
-            border-radius: 12px;
+    border: 2px solid white;
+    -webkit-border-radius: 16px;
+       -moz-border-radius: 16px;
+            border-radius: 16px;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
     -webkit-transform-style: preserve-3d;
        -moz-transform-style: preserve-3d;
             transform-style: preserve-3d;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     -webkit-transition: -webkit-transform 2s, opacity 2s;
        -moz-transition: -moz-transform 2s, opacity 2s;
             transition: transform 2s, opacity 2s;
@@ -375,6 +394,10 @@ pre {
     }
 #front-core-container .ring .plane {
     cursor: pointer;
+    }
+#front-core-container .ring .plane:hover {
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.4);
     }
 
 .cube > .plane#plane-1 {
@@ -537,11 +560,13 @@ pre {
     -webkit-animation: '';
        -moz-animation: none;
             animation: '';
+    color: #FFF;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #4080FF, 0 0 30px #4080FF, 0 0 40px #4080FF, 0 0 50px #4080FF, 0 0 75px #4080FF;
     }
 
 .mask ul {
     list-style: square;
-    list-style-position: inside;
+    list-style-position: outside;
     }
 .mask ul.preserve {
     list-style: none;
@@ -585,7 +610,7 @@ pre {
     height: 196px;
     }
 #mask-about.mask #avatar:hover, #mask-contactMe.mask #QR:hover {
-    border-color: blue;
+    border-color: #40A0FF;
     }
 #mask-elseWhere.mask ul li, #mask-contactMe.mask ul li {
     display: inline-block;
