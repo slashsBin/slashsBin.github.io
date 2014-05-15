@@ -1,33 +1,355 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Source Code Pro', monospace;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+    white-space: normal;
+}
+
+code, .name {
+    -webkit-transition: color 1s, border-color 1s, background-color 1s;
+    -moz-transition: color 1s, border-color 1s, background-color 1s;
+    transition: color 1s, border-color 1s, background-color 1s;
+}
+
 @media (min-width: 992px) {
-    nav .container-fluid {
+    .container-fluid.container-fluid-fixed-width {
         max-width: 900px;
     }
 }
 
-body {
-    padding-top: 50px;
-    margin-bottom: 96px;
-}
-
-#header_companion > div {
-    min-height: 16px;
+.companion > div {
+    min-height: 4px;
 }
 
 #logo {
     position: fixed;
     left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0px 1px 1px #000;
+    letter-spacing: 4px;
+}
+
+/*---- FOOTER ----*/
 #footer {
     position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
-    
 }
-#footer > div > div {
+#footer #info {
     padding: 10px;
 }
 #footer img {
     width: 55px;
     height: 55px;
+}
+#footer #info a:hover img {
+    -webkit-animation: spinAround 2s linear infinite;
+    -moz-animation: spinAround 2s linear infinite;
+    animation: spinAround 2s linear infinite;
+}
+#footer #info img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+#footer #info a:hover img {
+    -webkit-filter: grayscale(100%) invert(100%);
+    -moz-filter: grayscale(100%) invert(100%);
+    filter: grayscale(100%) invert(100%);
+}
+
+/*---- SECTIONs ----*/
+#content .section {
+    padding-top: 60px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+#content .section:last-child {
+    margin-bottom: 400px;
+}
+#content .section.row .col-xs-12 {
+    border-radius: 0 40px 0 40px;
+}
+#content .section p {
+    text-align: justify; 
+    -moz-text-align-last: center;
+    -webkit-text-align-last: center; 
+    text-align-last: center;
+    text-indent: 2em;
+    padding: 1em;
+}
+#content .section ul {
+    list-style: square;
+    list-style-position: outside;
+}
+#content .section ul.cloud {
+    list-style: none;
+}
+#content .section ul.cloud li {
+    display: inline-block;
+}
+#content .section ul.cloud li:not(:first-child):before {
+    content: "| ";
+}
+#content #about.section #avatar, #content #contact.section #QR {
+    float: right;
+    margin: 0 20px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#content #about.section #avatar {
+    width: 128px;
+    height: 128px;
+}
+#content #contact.section #QR {
+    width: 196px;
+    height: 196px;
+}
+#content #onTheNet.section ul li, #content #contact.section ul li {
+    display: inline-block;
+}
+
+/*---- CORE ----*/
+#core {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+#core #core-context {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#core #core-context #core-container {
+    position: relative;
+    height: 700px;
+    -webkit-perspective: 800;
+    -moz-perspective: 800px;
+    perspective: 800px;
+    -webkit-perspective-origin: 50% 225px;
+    -moz-perspective-origin: 50% 225px;
+    perspective-origin: 50% 225px;
+    cursor: crosshair;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#core #core-context #core-container #stage {
+    position: absolute;
+    height: 700px;
+    -webkit-transition: -webkit-transform 2s;
+    -moz-transition: -moz-transform 2s;
+    transition: transform 2s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#core #core-context #core-container #stage #shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: spin 32s infinite linear;
+    -moz-animation: spin 32s infinite linear;
+    animation: spin 32s infinite linear;
+}
+#core #core-context #core-container #stage #shape .plane {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 2s, opacity 2s;
+    -moz-transition: -moz-transform 2s, opacity 2s;
+    transition: transform 2s, opacity 2s;
+    -webkit-backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    backface-visibility: visible;
+    opacity: 0.8;
+}
+#core #core-context #core-container #stage #shape.ring .plane {
+    cursor: pointer;
+}
+#core #core-context #core-container #stage #shape.ring .plane:hover {
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 1);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-1 {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+    -moz-transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+    transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-2 {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+    -moz-transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+    transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-3 {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+    -moz-transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+    transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-4 {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+    -moz-transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+    transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-5 {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+    -moz-transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+    transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-6 {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+    -moz-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+    transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-7 {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+    -moz-transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+    transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-8 {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+    -moz-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+    transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-9 {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+    -moz-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+    transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-10 {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+    -moz-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+    transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-11 {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+    -moz-transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+    transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+}
+#core #core-context #core-container #stage #shape.cube > .plane#plane-12 {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+    -moz-transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+    transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-1 {
+    -webkit-transform: translateZ(380px);
+    -moz-transform: translateZ(380px);
+    transform: translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-2 {
+    -webkit-transform: rotateY(30deg) translateZ(380px);
+    -moz-transform: rotateY(30deg) translateZ(380px);
+    transform: rotateY(30deg) translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-3 {
+    -webkit-transform: rotateY(60deg) translateZ(380px);
+    -moz-transform: rotateY(60deg) translateZ(380px);
+    transform: rotateY(60deg) translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-4 {
+    -webkit-transform: rotateY(90deg) translateZ(380px);
+    -moz-transform: rotateY(90deg) translateZ(380px);
+    transform: rotateY(90deg) translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-5 {
+    -webkit-transform: rotateY(120deg) translateZ(380px);
+    -moz-transform: rotateY(120deg) translateZ(380px);
+    transform: rotateY(120deg) translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-6 {
+    -webkit-transform: rotateY(150deg) translateZ(380px);
+    -moz-transform: rotateY(150deg) translateZ(380px);
+    transform: rotateY(150deg) translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-7 {
+    -webkit-transform: rotateY(180deg) translateZ(380px);
+    -moz-transform: rotateY(180deg) translateZ(380px);
+    transform: rotateY(180deg) translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-8 {
+    -webkit-transform: rotateY(210deg) translateZ(380px);
+    -moz-transform: rotateY(210deg) translateZ(380px);
+    transform: rotateY(210deg) translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-9 {
+    -webkit-transform: rotateY(-120deg) translateZ(380px);
+    -moz-transform: rotateY(-120deg) translateZ(380px);
+    transform: rotateY(-120deg) translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-10 {
+    -webkit-transform: rotateY(-90deg) translateZ(380px);
+    -moz-transform: rotateY(-90deg) translateZ(380px);
+    transform: rotateY(-90deg) translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-11 {
+    -webkit-transform: rotateY(300deg) translateZ(380px);
+    -moz-transform: rotateY(300deg) translateZ(380px);
+    transform: rotateY(300deg) translateZ(380px);
+}
+#core #core-context #core-container #stage #shape.ring > .plane#plane-12 {
+    -webkit-transform: rotateY(330deg) translateZ(380px);
+    -moz-transform: rotateY(330deg) translateZ(380px);
+    transform: rotateY(330deg) translateZ(380px);
+}
+
+/*---- HEART ----*/
+.heart {
+    display: inline-block;
+    cursor: none;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    transition: all 1s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation: heartbeat 1.5s infinite ease-in-out;
+    -moz-animation: heartbeat 1.5s infinite ease-in-out;
+    animation: heartbeat 1.5s infinite ease-in-out;
+}
+.heart:hover {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    transform: scale(2);
+    -webkit-animation: '';
+    -moz-animation: none;
+    animation: '';
 }

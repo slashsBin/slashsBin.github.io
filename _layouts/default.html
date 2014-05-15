@@ -1,5 +1,7 @@
+{% assign t = site.data.[page.lang] %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang }}">
 
     {% include figlet.html %}
 
@@ -11,16 +13,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="/sBin, Mohammad Shokri, Shokri, slashsBin, slash sBin, Software Engineer, cyberRoze, 0x004D44, cyberRoze.md">
         <title>/s&beta;in</title>
+
+        <!--Assets: Styles-->
         <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/animation.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/core.css">
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Code+Pro|Iceberg|Wallpoet|Dawning+of+a+New+Day">
         <link rel="stylesheet" type="text/css" href="/assets/css/theme.css">
     </head>
-    <body>
+    <body id="cyberRoze" data-spy="scroll" data-target="#navBar">
 
         <!--NavBar-->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container-fluid">
+        <nav id="navBar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid container-fluid-fixed-width  page-scroll">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#slashsbin_navigation">
                         <span class="sr-only">Toggle navigation</span>
@@ -32,40 +37,92 @@
                 </div>
                 <div id="slashsbin_navigation" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
-
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#cv">R&eacute;sum&eacute;</a></li>
                     </ul>
-                    <p class="navbar-text hidden-xs"><a id="logo" href="/" class="navbar-link slashsbin">/s&beta;in</a></p>
+                    <ul class="nav navbar-nav hidden-xs">
+                        <li><a id="logo" href="#cyberRoze" class="navbar-link slashsbin">/s&beta;in</a></li>
+                    </ul>
                     <ul class="nav navbar-nav navbar-right">
-
+                        <li><a href="#onTheNet">On The Net</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <!--Header Companion-->
-        <div class="container-fluid">
-            <div id="header_companion" class="row">
-                <div class="col-xs-2"></div>
-                <div class="col-xs-2"></div>
-                <div class="col-xs-2"></div>
-                <div class="col-xs-2"></div>
-                <div class="col-xs-2"></div>
-                <div class="col-xs-2"></div>
+        <!--The Cube-->
+        <div id="core">
+            <div id="core-context">
+                <div class="container-fluid container-fluid-fixed-width">
+                    <div class="row">
+                        <div id="core-container" class="col-xs-12">
+                            <div class="row">
+                                <div id="stage" class="col-xs-12">
+                                    <div id="shape" class="cube" data-icon-hover="false">
+                                        <div class="plane icon" id="plane-1" title="127.0.0.1" data-icon="home" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="home"></div>
+                                        <div class="plane icon" id="plane-2" title="Projects" data-icon="gear" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="projects" data-mask="projects"></div>
+                                        <div class="plane icon" id="plane-3" title="About Me" data-icon="talkq" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="about" data-mask="about"></div>
+                                        <div class="plane icon" id="plane-4" title="Contact Me" data-icon="mail" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="contactMe" data-mask="contactMe"></div>
+                                        <div class="plane icon" id="plane-5" title="CV" data-icon="notebook" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="CV" data-mask="CV"></div>
+                                        <div class="plane icon" id="plane-6" title="Facebook" data-icon="facebook" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="FB" data-forward="https://www.fb.me/shokri.md"></div>
+                                        <div class="plane icon" id="plane-7" title="Google+" data-icon="gplus" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="GPlus" data-forward="https://profiles.google.com/shokri.md/"></div>
+                                        <div class="plane icon" id="plane-8" title="GitHub" data-icon="github" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="Github" data-forward="https://github.com/slashsBin"></div>
+                                        <div class="plane icon" id="plane-9" title="LinkedIn" data-icon="linkedin" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="linkedIn" data-forward="https://www.linkedin.com/in/mohammadshokri"></div>
+                                        <div class="plane icon" id="plane-10" title="Twitter" data-icon="twitterbird" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="twitter" data-forward="https://twitter.com/slashsbin"></div>
+                                        <div class="plane icon" id="plane-11" title="Mohammad Shokri Personal ASCII Armored GnuPG Key" data-icon="key" data-icon-size-x="200" data-icon-transform="s4,4,0,0t10,10" data-icon-size-y="200" data-cmd="GPG" data-mask="GPG"></div>
+                                        <div class="plane icon" id="plane-12" title="ElseWhere" data-icon="globeAlt" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="elseWhere" data-mask="elseWhere"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Content-->
+        <div id="content" class="container-fluid container-fluid-fixed-width">
+            <div id="about" class="row section">
+                <div class="col-xs-12">
+                    {% include masks/about.html %}
+                </div>
+            </div>
+            <div id="projects" class="row section">
+                <div class="col-xs-12">
+                    {% include masks/projects.html %}
+                </div>
+            </div>
+            <div id="cv" class="row section">
+                <div class="col-xs-12">
+                    {% include masks/CV.html %}
+                </div>
+            </div>
+            <div id="onTheNet" class="row section">
+                <div class="col-xs-12">
+                    {% include masks/onTheNet.html %}
+                </div>
+            </div>
+            <div id="contact" class="row section">
+                <div class="col-xs-12">
+                    {% include masks/contactMe.html %}
+                </div>
             </div>
         </div>
 
         <!--Footer-->
         <div id="footer">
             <div class="container-fluid">
-                <div class="row">
+                <div id="info" class="row">
                     <div class="hidden-xs hidden-sm col-md-8">
                         <div class="row">
-                            <div class="col-xs-2 text-center"><a href="http://www.catb.org/~esr/faqs/hacker-howto.html" title="Hacker" target="_blank"><img class="img-rounded" src="http://www.catb.org/hacker-emblem/glider.png" alt="Hacker" /></a></div>
-                            <div class="col-xs-2 text-center"><a href="https://en.gravatar.com/mohammadshokri" title="Gravatar" target="_blank"><img class="img-rounded" src="http://www.gravatar.com/avatar/456abb344d5515fe4e18bbb62a2ebec6?s=55&d=identicon&f=y"  alt="Gravatar" /></a></div>
-                            <div class="col-xs-2 text-center"><a href="http://www.w3.org/TR/html5/" title="HTML5 Powered" target="_blank"><img class="img-rounded" src="http://www.w3.org/html/logo/downloads/HTML5_1Color_White.png" alt="HTML5 Powered" /></a></div>
-                            <div class="col-xs-2 text-center"><a href="http://careers.stackoverflow.com/slashsbin" title="Careers 2.0" target="_blank"><img class="img-rounded" src="http://cdn.sstatic.net/stackexchange/img/logos/careers/careers-icon.png" alt="Careers 2.0" /></a></div>
-                            <div class="col-xs-2 text-center"><a href="http://internetdefenseleague.org" title="Member of The Internet Defense League" target="_blank"><img class="img-rounded" src="http://internetdefenseleague.org/images/badges/final/shield_badge.png" alt="Internet Defense League" /></a></div>
-                            <div class="col-xs-2 text-center"><a href="http://ipv6.slashsbin.com/" title="THE WORLD IS DIFFERENT NOW" target="_blank"><img class="img-rounded" src="http://www.worldipv6launch.org/wp-content/themes/ipv6/downloads/World_IPv6_launch_logo_128.png" alt="IPv6" /></a></div>
+                            <div class="col-xs-2 text-center"><a class="tt" href="http://www.catb.org/~esr/faqs/hacker-howto.html" data-toggle="tooltip" data-placement="top" title="Hacker" target="_blank"><img class="img-rounded" src="http://www.catb.org/hacker-emblem/glider.png" alt="Hacker" /></a></div>
+                            <div class="col-xs-2 text-center"><a class="tt" href="https://en.gravatar.com/mohammadshokri" data-toggle="tooltip" data-placement="top" title="Gravatar" target="_blank"><img class="img-rounded" src="http://www.gravatar.com/avatar/456abb344d5515fe4e18bbb62a2ebec6?s=55&d=identicon&f=y"  alt="Gravatar" /></a></div>
+                            <div class="col-xs-2 text-center"><a class="tt" href="http://www.w3.org/TR/html5/" data-toggle="tooltip" data-placement="top" title="HTML5 Powered" target="_blank"><img class="img-rounded" src="http://www.w3.org/html/logo/downloads/HTML5_1Color_White.png" alt="HTML5 Powered" /></a></div>
+                            <div class="col-xs-2 text-center"><a class="tt" href="http://careers.stackoverflow.com/slashsbin" data-toggle="tooltip" data-placement="top" title="Careers 2.0" target="_blank"><img class="img-rounded" src="http://cdn.sstatic.net/stackexchange/img/logos/careers/careers-icon.png" alt="Careers 2.0" /></a></div>
+                            <div class="col-xs-2 text-center"><a class="tt" href="http://internetdefenseleague.org" data-toggle="tooltip" data-placement="top" title="Member of The Internet Defense League" target="_blank"><img class="img-rounded" src="http://internetdefenseleague.org/images/badges/final/shield_badge.png" alt="Internet Defense League" /></a></div>
+                            <div class="col-xs-2 text-center"><a class="tt" href="http://ipv6.slashsbin.com/" data-toggle="tooltip" data-placement="top" title="THE WORLD IS DIFFERENT NOW" target="_blank"><img class="img-rounded" src="http://www.worldipv6launch.org/wp-content/themes/ipv6/downloads/World_IPv6_launch_logo_128.png" alt="IPv6" /></a></div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-4 text-center">
@@ -74,15 +131,20 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="/assets/js/core.js"></script>
-    <!--{% include footer.html %}-->
-</body>
+        <!--Assets: Scripts-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//browserscan.rapid7.com/EM-496391737/1/0/1/0/collect.js" async></script>
+        <script src="/assets/js/iconz.js"></script>
+        <script src="/assets/js/core.js"></script>
 
-{% include binary.html %}
+        <!--Assets: Analytics-->
+        {% include analytics.html %}
+    </body>
+
+    {% include binary.html %}
 
 </html>

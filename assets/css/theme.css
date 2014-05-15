@@ -1,7 +1,17 @@
 body {
-    font-family: 'Source Code Pro', monospace;
-    background-color: #FFF;
     background-image: url('/assets/img/noise_bg.png');
+}
+
+a {
+    color: #40A0FF;
+}
+
+code {
+    color: #FFF;
+    background-color: #40A0FF;
+}
+code:hover {
+    background-color: #000;
 }
 
 ::selection {
@@ -10,24 +20,91 @@ body {
     text-shadow: none;
 }
 
-.slashsbin {
-    font-family: 'Ice Burg';
-    font-weight: normal;
-    font-size: 1em;
+.name {
+    font-family: 'Dawning of a New Day', cursive;
+    font-size: xx-large;
+    letter-spacing: 0;
+}
+.name:hover {
+    color: #40A0FF;
 }
 
-#header_companion {
-    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+.slashsbin {
+    font-family: 'Iceberg';
+    font-weight: normal;
+    font-size: 3em;
+    color: #000;
 }
-#header_companion > div:nth-child(1) { background-color: rgb(40,40,40); }
-#header_companion > div:nth-child(2) { background-color: rgb(80,80,80); }
-#header_companion > div:nth-child(3) { background-color: rgb(120,120,120); }
-#header_companion > div:nth-child(4) { background-color: rgb(160,160,160); }
-#header_companion > div:nth-child(5) { background-color: rgb(200,200,200); }
-#header_companion > div:nth-child(6) { background-color: rgb(255,255,255); }
+
+#navBar a {
+    font-family: 'Iceberg';
+}
+#navBar .active #logo {
+    background: none;
+}
+
+@media(min-width:992px) {
+    #navBar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    #logo {
+        font-size: 4em;
+    }
+
+    #navBar.navbar-collapse #logo {
+        font-size: 3em;
+    }
+}
+#navBar.navbar-collapse {
+    padding: 0;
+    background-color: #000;
+}
+#navBar.navbar-collapse a {
+    color: #FFF;
+}
+#navBar.navbar-collapse .active a {
+    background-color: #FFF;
+    color: #000;
+}
+#navBar.navbar-collapse .active #logo {
+    color: #FFF;
+}
+
+.companion > div:nth-child(1) { background-color: rgb(40,40,40); }
+.companion > div:nth-child(2) { background-color: rgb(80,80,80); }
+.companion > div:nth-child(3) { background-color: rgb(120,120,120); }
+.companion > div:nth-child(4) { background-color: rgb(160,160,160); }
+.companion > div:nth-child(5) { background-color: rgb(200,200,200); }
+.companion > div:nth-child(6) { background-color: rgb(255,255,255); }
 
 #footer {
     color: #FFF;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: inset 0 -24px 48px rgba(0, 0, 0, 0.2), 0 -6px 0 rgba(0, 0, 0, 0.1);
+}
+
+#core #core-context #core-container #stage #shape .plane {
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#content .section.row .col-xs-12 {
+    background-color: rgba(255,255,255,0.9);
+    padding: 2em;
+}
+
+#content #about.section #avatar, #content #contact.section #QR {
+    border: 2px dashed rgb(128,128,128);
+}
+#content #about.section #avatar:hover, #content #contact.section #QR:hover {
+    border-color: #40A0FF;
+}
+
+.heart:hover {
+    color: #FFF;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #4080FF, 0 0 30px #4080FF, 0 0 40px #4080FF, 0 0 50px #4080FF, 0 0 75px #4080FF;
 }
