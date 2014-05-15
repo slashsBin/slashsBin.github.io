@@ -1,7 +1,5 @@
-{% assign t = site.data.[page.lang] %}
-
 <!DOCTYPE html>
-<html lang="{{ page.lang }}">
+<html lang="en">
 
     {% include figlet.html %}
 
@@ -33,88 +31,27 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand visible-xs slashsbin" href="#cyberRoze">/s&beta;in</a>
+                    <a class="navbar-brand visible-xs slashsbin" href="/#cyberRoze">/s&beta;in</a>
                 </div>
                 <div id="slashsbin_navigation" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#cv">R&eacute;sum&eacute;</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#projects">Projects</a></li>
+                        <li><a href="/#cv">R&eacute;sum&eacute;</a></li>
                     </ul>
                     <ul class="nav navbar-nav hidden-xs">
-                        <li><a id="logo" href="#cyberRoze" class="navbar-link slashsbin">/s&beta;in</a></li>
+                        <li><a id="logo" href="/#cyberRoze" class="navbar-link slashsbin">/s&beta;in</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#extra">Extra</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/#mentorship">Mentorship</a></li>
+                        <li><a href="/#extra">Extra</a></li>
+                        <li><a href="/#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <!--The Cube-->
-        <div id="core">
-            <div id="core-context">
-                <div class="container-fluid container-fluid-fixed-width">
-                    <div class="row">
-                        <div id="core-container" class="col-xs-12">
-                            <div class="row">
-                                <div id="stage" class="col-xs-12">
-                                    <div id="shape" class="cube" data-icon-hover="false">
-                                        <div class="plane icon" id="plane-1" title="127.0.0.1" data-icon="home" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="home"></div>
-                                        <div class="plane icon" id="plane-2" title="Projects" data-icon="gear" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="projects" data-mask="projects"></div>
-                                        <div class="plane icon" id="plane-3" title="About Me" data-icon="talkq" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="about" data-mask="about"></div>
-                                        <div class="plane icon" id="plane-4" title="Contact Me" data-icon="mail" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="contactMe" data-mask="contactMe"></div>
-                                        <div class="plane icon" id="plane-5" title="CV" data-icon="notebook" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="CV" data-mask="CV"></div>
-                                        <div class="plane icon" id="plane-6" title="Facebook" data-icon="facebook" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="FB" data-forward="https://www.fb.me/shokri.md"></div>
-                                        <div class="plane icon" id="plane-7" title="Google+" data-icon="gplus" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="GPlus" data-forward="https://profiles.google.com/shokri.md/"></div>
-                                        <div class="plane icon" id="plane-8" title="GitHub" data-icon="github" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="Github" data-forward="https://github.com/slashsBin"></div>
-                                        <div class="plane icon" id="plane-9" title="LinkedIn" data-icon="linkedin" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="linkedIn" data-forward="https://www.linkedin.com/in/mohammadshokri"></div>
-                                        <div class="plane icon" id="plane-10" title="Twitter" data-icon="twitterbird" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="twitter" data-forward="https://twitter.com/slashsbin"></div>
-                                        <div class="plane icon" id="plane-11" title="Mohammad Shokri Personal ASCII Armored GnuPG Key" data-icon="key" data-icon-size-x="200" data-icon-transform="s4,4,0,0t10,10" data-icon-size-y="200" data-cmd="GPG" data-mask="GPG"></div>
-                                        <div class="plane icon" id="plane-12" title="ElseWhere" data-icon="globeAlt" data-icon-size-x="200" data-icon-size-y="200" data-icon-transform="s4,4,0,0t10,10" data-cmd="elseWhere" data-mask="elseWhere"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Content-->
-        <div id="content" class="container-fluid container-fluid-fixed-width">
-            <div id="about" class="row section">
-                <div class="col-xs-12">
-                    {% include masks/about.html %}
-                </div>
-            </div>
-            <div id="projects" class="row section">
-                <div class="col-xs-12">
-                    {% include masks/projects.html %}
-                </div>
-            </div>
-            <div id="cv" class="row section">
-                <div class="col-xs-12">
-                    {% include masks/CV.html %}
-                </div>
-            </div>
-            <div id="extra" class="row section">
-                <div class="col-xs-12">
-                    {% include masks/heart.html %}
-                </div>
-            </div>
-            <div id="onTheNet" class="row section">
-                <div class="col-xs-12">
-                    {% include masks/onTheNet.html %}
-                </div>
-            </div>
-            <div id="contact" class="row section">
-                <div class="col-xs-12">
-                    {% include masks/contactMe.html %}
-                </div>
-            </div>
-        </div>
+        {{ content }}
 
         <!--Footer-->
         <div id="footer">
