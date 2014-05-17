@@ -75,8 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 /*---- SECTIONs ----*/
 #content .section {
     padding-top: 60px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin: 80px 10px;
 }
 #content .section:last-child {
     margin-bottom: 400px;
