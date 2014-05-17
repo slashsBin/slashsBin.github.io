@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 80px 10px;
 }
 #content .section:last-child {
-    margin-bottom: 400px;
+    margin-bottom: 100px;
 }
 #content .section.row .col-xs-12 {
     border-radius: 0 40px 0 40px;
