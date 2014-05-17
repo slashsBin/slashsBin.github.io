@@ -17,7 +17,7 @@ $(function() {
             $('html, body').stop().animate({
                 scrollTop: $($a.attr('href')).offset().top
             }, 1500, 'easeInOutExpo');
-//            e.preventDefault();
+            e.preventDefault();
         });
     });
 
