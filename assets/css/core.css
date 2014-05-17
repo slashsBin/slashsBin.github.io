@@ -56,12 +56,17 @@ h1, h2, h3, h4, h5, h6 {
     width: 55px;
     height: 55px;
 }
-#footer #info a:hover img {
+#footer #info a {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+}
+#footer #info a:hover {
     -webkit-animation: spinAround 2s linear infinite;
     -moz-animation: spinAround 2s linear infinite;
     animation: spinAround 2s linear infinite;
 }
-#footer #info img {
+#footer #info a img {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -121,6 +126,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 #content #onTheNet.section ul li, #content #contact.section ul li {
     display: inline-block;
+}
+#content #onTheNet.section ul li a, #content #contact.section ul li a {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+#content #onTheNet.section ul li a:hover, #content #contact.section ul li a:hover {
+    -webkit-animation: spinAround 2s linear infinite;
+    -moz-animation: spinAround 2s linear infinite;
+    animation: spinAround 2s linear infinite;
 }
 
 /*---- CORE ----*/
