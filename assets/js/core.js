@@ -1,4 +1,13 @@
-var iconAttr = {fill: '#E0E0E0', stroke: 'none'};
+var iconAttr = {
+    default: {
+        base: {'fill': '#FFF', 'stroke': 'none', 'stroke-width': 0},
+        hover: {'fill': '#000', 'stroke': 'none', 'stroke-width': 0}
+    },
+    darkBlue: {
+        base: {'fill': '#000', 'stroke': 'none', 'stroke-width': 0},
+        hover: {'fill': '#40A0FF', 'stroke': 'none', 'stroke-width': 0}
+    }
+};
 var paperz = {}, elz = {};
 
 $(function() {
@@ -30,28 +39,32 @@ $(function() {
                         icn_sx = $(this).data('icon-size-x'),
                         icn_sy = $(this).data('icon-size-y'),
                         icn_trnsfrm = $(this).data('icon-transform'),
-                        icn_attr = $(this).data('icon-attr');
+                        icn_theme = $(this).data('icon-theme');
                 if (undefined === icn_trnsfrm) {
                     var icn_ssx = Math.round(icn_sx / 32);
                     var icn_ssy = Math.round(icn_sy / 32);
                     icn_trnsfrm = 's' + icn_ssx + ',' + icn_ssy + ',0,0';
                 }
-                if (undefined === icn_attr) {
-                    icn_attr = iconAttr;
+                if (undefined === icn_theme) {
+                    icn_theme = 'default';
                 }
                 paperz[id] = Raphael(id, icn_sx, icn_sy);
-                elz[id] = paperz[id].path(iconz[icn]).transform(icn_trnsfrm).attr(icn_attr);
+                elz[id] = paperz[id].path(iconz[icn]).transform(icn_trnsfrm).attr(iconAttr[icn_theme]['base']);
             })
             .on('mouseenter mouseleave', function(e) {
                 if (false === $(this).parent().data('iconHover') || false === $(this).data('iconHover')) {
                     return false;
                 }
                 var id = $(this).attr('id');
+                icn_theme = $(this).data('icon-theme');
+                if (undefined === icn_theme) {
+                    icn_theme = 'default';
+                }
                 elz[id].stop();
                 if ('mouseenter' === e.type) {
-                    elz[id].animate({stroke: '#FFF', 'stroke-width': 4}).animate({fill: '#000'}, 500);
+                    elz[id].animate(iconAttr[icn_theme]['hover'], 500);
                 } else {
-                    elz[id].animate(iconAttr);
+                    elz[id].animate(iconAttr[icn_theme]['base']);
                 }
             });
 
