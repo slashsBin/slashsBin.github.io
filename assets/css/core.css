@@ -13,7 +13,7 @@ code {
     white-space: normal;
 }
 
-code, .name {
+code, .name, .heart {
     -webkit-transition: color 1s, border-color 1s, background-color 1s;
     -moz-transition: color 1s, border-color 1s, background-color 1s;
     transition: color 1s, border-color 1s, background-color 1s;

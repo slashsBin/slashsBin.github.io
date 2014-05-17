@@ -106,5 +106,12 @@ code:hover {
 
 .heart:hover {
     color: #FFF;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #4080FF, 0 0 30px #4080FF, 0 0 40px #4080FF, 0 0 50px #4080FF, 0 0 75px #4080FF;
+    text-shadow: 0 0 5px #FFF,
+        0 0 10px #FFF,
+        0 0 15px #FFF,
+        0 0 20px #40A0FF,
+        0 0 30px #40A0FF,
+        0 0 40px #40A0FF,
+        0 0 50px #40A0FF,
+        0 0 75px #40A0FF;
 }
