@@ -68,31 +68,6 @@ $(function() {
                 }
             });
 
-    $('#footer')
-            .on('click', function() {
-                if (undefined !== (linkURL = $(this).data('forward'))) {
-                    window.open(linkURL + '?utm_source=slashsBin&utm_medium=website&utm_campaign=slashsBin');
-                    return false;
-                }
-                if (undefined !== (mask = "CV")) {
-                    $('#body #back-page.face .mask').removeClass('putOn').filter('#mask-' + mask).addClass('putOn');
-                    var bdy = $('#body');
-                    var fpage = bdy.find('#front-page');
-                    var shp = fpage.find('#front-core-container #shape');
-                    if (1 == bdy.data('flip')) {
-                        //fpage.css('display', 'block');
-                        bdy.data('flip', 0).removeClass('flip');
-                        shp.removeClass('paused');
-                    } else {
-                        //fpage.css('display', 'none');
-                        bdy.data('flip', 1).addClass('flip');
-                        shp.addClass('paused');
-                    }
-                }
-
-                return false;
-            });
-
     $('#core #core-context #core-container').on('click', function(e) {
         var $stg = $(this).find('#stage');
         var $shp = $stg.find('#shape');
@@ -107,6 +82,20 @@ $(function() {
                     .css('mozTransform', 'translateZ(-200px)')
                     .css('transform', 'translateZ(-200px)');
         }
+        return false;
+    });
+
+    $('#core #core-context #core-container #stage').on('click', '.ring .plane', function() {
+        if (undefined !== (linkURL = $(this).data('forward'))) {
+            window.open(linkURL + '?utm_source=slashsBin&utm_medium=website&utm_campaign=slashsBin');
+            return false;
+        }
+        if (undefined !== (section = $(this).data('section'))) {
+            $('html, body').stop().animate({
+                scrollTop: $('#' + section).offset().top
+            }, 1500, 'easeInOutExpo');
+        }
+
         return false;
     });
 
