@@ -1,6 +1,9 @@
 name: /sBin
-safe: true
 lsi: false
 pygments: true
 timezone: Asia/Tehran
 exclude: [ nbproject ]
+gems:
+  - jekyll-redirect-from
+  - jemoji
+  - jekyll-mentions
