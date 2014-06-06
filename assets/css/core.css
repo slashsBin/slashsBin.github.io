@@ -1,3 +1,5 @@
+@import url('http://fonts.googleapis.com/earlyaccess/lateef.css');
+
 html, body {
     width: 100%;
     height: 100%;
@@ -40,6 +42,13 @@ code, .name, .heart {
 h1, h2, h3, h4, h5, h6 {
     text-shadow: 0px 1px 1px #000;
     letter-spacing: 4px;
+}
+
+.persian {
+	font-family: 'Lateef', serif;
+	font-size: 200%;
+	text-align: right;
+	direction: rtl;
 }
 
 /*---- FOOTER ----*/
@@ -95,6 +104,9 @@ h1, h2, h3, h4, h5, h6 {
     text-align-last: center;
     text-indent: 2em;
     padding: 1em;
+}
+#content.post .section p {
+	text-indent: 0;
 }
 #content .section ul {
     list-style: square;
@@ -366,4 +378,13 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-animation: '';
     -moz-animation: none;
     animation: '';
+}
+
+/*---- POST ----*/
+.post .post-avatar {
+	margin-right: 10px;
+}
+.post .persian .post-avatar {
+	margin-right: 0;
+	margin-left: 10px;
 }
