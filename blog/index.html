@@ -1,0 +1,31 @@
+---
+layout: default
+uri: /
+title: blog
+---
+
+<!--Content-->
+<div id="content" class="container-fluid container-fluid-fixed-width">
+	<div class="row section">
+		<div class="col-xs-12">
+			<h2>Blog</h2>
+			<div class="row companion">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-2"></div>
+				<div class="col-xs-2"></div>
+				<div class="col-xs-2"></div>
+				<div class="col-xs-2"></div>
+				<div class="col-xs-2"></div>
+			</div>
+
+			<h3>Archive</h3>
+			<ul>
+				{% for post in site.posts %}
+				<li>
+					<a href="{{ post.url }}">{{ post.title }}</a> @{{ post.date | date_to_string }}
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>

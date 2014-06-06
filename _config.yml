@@ -2,6 +2,7 @@ name: /sBin
 lsi: false
 pygments: true
 timezone: Asia/Tehran
+permalink: /blog/:year/:month/:day/:title
 exclude: [ nbproject ]
 gems:
   - jekyll-redirect-from
