@@ -94,7 +94,8 @@ h1, h2, h3, h4, h5, h6 {
 #content .section:last-child {
     margin-bottom: 100px;
 }
-#content .section.row .col-xs-12 {
+#content .section.row .section-container {
+	padding: 2em;
     border-radius: 0 40px 0 40px;
 }
 #content .section p {
@@ -104,9 +105,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align-last: center;
     text-indent: 2em;
     padding: 1em;
-}
-#content.post .section p {
-	text-indent: 0;
 }
 #content .section ul {
     list-style: square;
@@ -381,6 +379,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*---- POST ----*/
+#content.post .section p {
+	text-indent: 0;
+}
 .post .post-avatar {
 	margin-right: 10px;
 }

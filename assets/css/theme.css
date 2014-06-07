@@ -92,9 +92,8 @@ code:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-#content .section.row .col-xs-12 {
+#content .section.row .section-container {
     background-color: rgba(255,255,255,0.9);
-    padding: 2em;
 }
 
 #content #about.section #avatar, #content #contact.section #QR {

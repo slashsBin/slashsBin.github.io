@@ -8,7 +8,7 @@ active: blog
 <!--Content-->
 <div id="content" class="container-fluid container-fluid-fixed-width">
 	<div class="row section">
-		<div class="col-xs-12">
+		<div class="col-xs-12 section-container">
 			<h2>Blog</h2>
 			<div class="row companion">
 				<div class="col-xs-2"></div>
@@ -25,7 +25,7 @@ active: blog
 				<a class="list-group-item tt" href="{{ post.url }}" title="{{ post.header }}" data-toggle="tooltip">
 					<img class="img-rounded" src="http://www.gravatar.com/avatar/{{ post.header | md5 }}?s=20&d=blank" />
 					{{ post.title }}
-					<span class="badge">{{ post.date | date_to_string }}</span>
+					<span class="badge"><span class="glyphicon glyphicon-time"></span> {{ post.date | date_to_string }}</span>
 				</a>
 				{% endfor %}
 			</div>
