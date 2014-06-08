@@ -1,6 +1,7 @@
 name: /sBin
 lsi: false
 pygments: true
+markdown: kramdown
 timezone: Asia/Tehran
 permalink: /blog/:year/:month/:day/:title
 exclude: [ nbproject ]
