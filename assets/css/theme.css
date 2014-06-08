@@ -36,6 +36,10 @@ code:hover {
     color: #000;
 }
 
+.white {
+	color: #FFF !important;
+}
+
 #navBar a {
     font-family: 'Iceberg';
 }
