@@ -25,7 +25,7 @@ active: blog
 				<li class="list-group-item tt" title="{{ post.header }}" data-toggle="tooltip">
 					<img class="img-rounded" src="http://www.gravatar.com/avatar/{{ post.header | md5 }}?s=20&d=blank" />
 					<a href="{{ post.url }}/">{{ post.title }}</a>
-					<div class="badge"><span class="glyphicon glyphicon-comment"></span> <a class="white" href="{{ post.url }}/#disqus_thread">0</a></div>
+					<div class="badge"><span class="glyphicon glyphicon-comment"></span> <a class="white" href="{{ post.url }}/#disqus_thread">-</a></div>
 					<span class="badge"><span class="glyphicon glyphicon-time"></span> {{ post.date | date_to_string }}</span>
 				</li>
 				{% endfor %}
