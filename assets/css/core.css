@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #core #core-context #core-container #stage {
-    position: absolute;
+    position: relative;
     height: 700px;
     -webkit-transition: -webkit-transform 2s;
     -moz-transition: -moz-transform 2s;
@@ -223,6 +223,11 @@ h1, h2, h3, h4, h5, h6 {
     -moz-backface-visibility: visible;
     backface-visibility: visible;
     opacity: 0.8;
+}
+#core #core-context #core-container #stage #shape.ring:hover {
+	-webkit-animation-duration: 256s;
+	-moz-animation-duration: 256s;
+	animation-duration: 256s;
 }
 #core #core-context #core-container #stage #shape.ring .plane {
     cursor: pointer;
