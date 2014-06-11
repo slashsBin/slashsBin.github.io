@@ -386,6 +386,9 @@ h1, h2, h3, h4, h5, h6 {
 /*---- POST ----*/
 #content.post .section p {
 	text-indent: 0;
+	-webkit-text-align-last: auto;
+	-moz-text-align-last: auto;
+	text-align-last: auto;
 }
 .post .post-avatar {
 	margin-right: 10px;
