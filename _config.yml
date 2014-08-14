@@ -1,10 +1,11 @@
 name: /sBin
 lsi: false
-pygments: true
+highlighter: pygments
 markdown: kramdown
 timezone: Asia/Tehran
 permalink: /blog/:year/:month/:day/:title
-exclude: [ nbproject ]
+excerpt_separator: "\n\n"
+exclude: [ .kdev4 ]
 gems:
   - jekyll-redirect-from
   - jemoji
