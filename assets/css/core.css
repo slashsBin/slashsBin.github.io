@@ -392,8 +392,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .post .post-avatar {
 	margin-right: 10px;
+	width: 40px;
+	height: 40px;
 }
 .post .persian .post-avatar {
 	margin-right: 0;
 	margin-left: 10px;
+}
+.post .post-avatar img {
+	width: 40px;
+	height: 40px;
 }
