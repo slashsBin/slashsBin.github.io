@@ -23,7 +23,7 @@ active: blog
 			<ul class="list-group">
 				{% for post in site.posts %}
 				<li class="list-group-item tt" title="{{ post.header }}" data-toggle="tooltip">
-					<img class="img-rounded" src="http://www.gravatar.com/avatar/{{ post.hash }}?s=20&d=identicon&f=y" />
+					<img class="img-rounded" src="//www.gravatar.com/avatar/{{ post.hash }}?s=20&d=identicon&f=y" />
 					<a href="{{ post.url }}/">{{ post.title }}</a>
 					<div class="badge"><span class="glyphicon glyphicon-comment"></span> <a class="white" href="{{ post.url }}/#disqus_thread">-</a></div>
 					<span class="badge"><span class="glyphicon glyphicon-time"></span> {{ post.date | date_to_string }}</span>
@@ -39,7 +39,7 @@ var disqus_shortname = 'slashsbin';
 (function () {
 var s = document.createElement('script'); s.async = true;
 s.type = 'text/javascript';
-s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
 (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 }());
 </script>
