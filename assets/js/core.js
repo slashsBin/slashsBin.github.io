@@ -119,9 +119,9 @@ $(function() {
 
     $('#contact #QR').on('click', function() {
         if (!(M = $(this).data('m'))) {
-            $(this).animate({width: 342, height: 342}, 'fast').attr('src', '/assets/img/QR_M.png');
+            $(this).animate({width: 342, height: 342}, 'fast').attr({'src': '/assets/img/QR_M.png', 'width': '342', 'height': '342'});
         } else {
-            $(this).animate({width: 196, height: 196}, 'fast').attr('src', '/assets/img/QR.png');
+            $(this).animate({width: 196, height: 196}, 'fast').attr({'src': '/assets/img/QR.png', 'width': '196', 'height': '196'});
         }
         $(this).data('m', !M);
     });
