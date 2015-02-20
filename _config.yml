@@ -5,7 +5,7 @@ markdown: kramdown
 timezone: Asia/Tehran
 permalink: /blog/:year/:month/:day/:title
 excerpt_separator: "\n\n"
-exclude: [ .kdev4 ]
+exclude: [ .DS_Store ]
 gems:
   - jekyll-redirect-from
   - jemoji
