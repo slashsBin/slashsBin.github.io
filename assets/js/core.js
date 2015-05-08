@@ -12,6 +12,67 @@ var paperz = {}, elz = {};
 
 $(function() {
 
+    particlesJS('particles-js', {
+        particles: {
+            color: '#40A0FF',
+            color_random: false,
+            shape: 'circle',
+            opacity: {
+                opacity: 1,
+                anim: {
+                    enable: true,
+                    speed: 1,
+                    opacity_min: 0,
+                    sync: false
+                }
+            },
+            size: 8,
+            size_random: true,
+            nb: 256,
+            line_linked: {
+                enable_auto: true,
+                distance: 128,
+                color: '#FFF',
+                opacity: 1,
+                width: 1,
+                condensed_mode: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 600
+                }
+            },
+            anim: {
+                enable: true,
+                speed: 1
+            }
+        },
+        interactivity: {
+            enable: true,
+            mouse: {
+                distance: 256
+            },
+            detect_on: 'canvas',
+            mode: 'grab',
+            line_linked: {
+                opacity: .4
+            },
+            events: {
+                onclick: {
+                    enable: true,
+                    mode: 'push',
+                    nb: 4
+                },
+                onresize: {
+                    enable: true,
+                    mode: 'bounce',
+                    density_auto: false,
+                    density_area: 800
+                }
+            }
+        },
+        retina_detect: true
+        });
+
     $(window).scroll(function() {
         if ($("#navBar").offset().top > 200) {
             $("#navBar").addClass("navbar-collapse");

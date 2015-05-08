@@ -16,11 +16,11 @@ html, body {
 
 body {
     background-color: #000;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Source Code Pro', 'Ubuntu Mono', monospace;
 }
 
 code {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Source Code Pro', 'Ubuntu Mono', monospace;
     white-space: normal;
 }
 
@@ -34,6 +34,13 @@ code, .name, .heart {
     .container-fluid.container-fluid-fixed-width {
         max-width: 900px;
     }
+}
+
+#particles-js {
+	width:100%;
+	height:100%;
+    position: fixed;
+    cursor: crosshair;
 }
 
 .companion > div {
@@ -108,9 +115,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0 40px 0 40px;
 }
 #content .section p {
-    text-align: justify; 
+    text-align: justify;
     -moz-text-align-last: center;
-    -webkit-text-align-last: center; 
+    -webkit-text-align-last: center;
     text-align-last: center;
     text-indent: 2em;
     padding: 1em;
@@ -177,7 +184,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-perspective-origin: 50% 225px;
     -moz-perspective-origin: 50% 225px;
     perspective-origin: 50% 225px;
-    cursor: crosshair;
+    cursor: pointer;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
