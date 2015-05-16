@@ -13,64 +13,94 @@ var paperz = {}, elz = {};
 $(function() {
 
     particlesJS('particles-js', {
-        particles: {
-            color: '#40A0FF',
-            color_random: false,
-            shape: 'circle',
-            opacity: {
-                opacity: 1,
-                anim: {
-                    enable: true,
-                    speed: 1,
-                    opacity_min: 0,
-                    sync: false
-                }
-            },
-            size: 8,
-            size_random: true,
-            nb: 256,
-            line_linked: {
-                enable_auto: true,
-                distance: 128,
-                color: '#FFF',
-                opacity: 1,
-                width: 1,
-                condensed_mode: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 600
-                }
-            },
-            anim: {
-                enable: true,
-                speed: 1
-            }
-        },
-        interactivity: {
-            enable: true,
-            mouse: {
-                distance: 256
-            },
-            detect_on: 'canvas',
-            mode: 'grab',
-            line_linked: {
-                opacity: .4
-            },
-            events: {
-                onclick: {
-                    enable: true,
-                    mode: 'push',
-                    nb: 4
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                    }
                 },
-                onresize: {
-                    enable: true,
-                    mode: 'bounce',
-                    density_auto: false,
-                    density_area: 800
+            "color": {
+                "value": "#40A0FF"
+                },
+            "shape": {
+                "type": "polygon",
+                "stroke": {
+                    "width": 0,
+                    "color": "#FFFFFF"
+                    },
+                "polygon": {
+                    "nb_sides": 6
+                    }
+                },
+            "opacity": {
+                "value": 0.8,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0,
+                    "sync": false
+                    }
+                },
+            "size": {
+                "value": 8,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                    }
+                },
+            "line_linked": {
+                "enable": true,
+                "distance": 128,
+                "color": "#FFFFFF",
+                "opacity": 1,
+                "width": 1
+                },
+            "move": {
+                "enable": true,
+                "speed": 1,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                    }
                 }
-            }
-        },
-        retina_detect: true
+            },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                    },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                    },
+                "resize": true
+                },
+            "modes": {
+                "repulse": {
+                    "distance": 128
+                    },
+                "push": {
+                    "particles_nb": 4
+                    },
+                "remove": {
+                    "particles_nb": 2
+                    }
+                }
+            },
+        "retina_detect": true
         });
 
     $(window).scroll(function() {
