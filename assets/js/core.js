@@ -216,4 +216,18 @@ $(function() {
         }
         $(this).data('m', !M);
     });
+
+    var favicon = new Favico({
+        animation: 'popFade',
+        bgColor: '#000000',
+        textColor: '#FFFFFF',
+        fontFamily: 'monospace',
+        position: 'down'
+        });
+    var faviconIndex = 0;
+    var faviconData = [5, 6, 7, 8];
+    window.setInterval(function() {
+        favicon.badge( faviconData[faviconIndex] );
+        faviconIndex = (faviconIndex == 3) ? 0 : faviconIndex++;
+        }, 1000);
 });
