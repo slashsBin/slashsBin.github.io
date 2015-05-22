@@ -210,9 +210,9 @@ $(function() {
 
     $('#contact #QR').on('click', function() {
         if (!(M = $(this).data('m'))) {
-            $(this).animate({width: 342, height: 342}, 'fast').attr({'src': '/assets/img/QR_M.png', 'width': '342', 'height': '342'});
+            $(this).animate({width: 400, height: 400}, 'fast').attr({'width': '400', 'height': '400'});
         } else {
-            $(this).animate({width: 196, height: 196}, 'fast').attr({'src': '/assets/img/QR.png', 'width': '196', 'height': '196'});
+            $(this).animate({width: 200, height: 200}, 'fast').attr({'width': '200', 'height': '200'});
         }
         $(this).data('m', !M);
     });
