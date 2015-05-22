@@ -218,16 +218,18 @@ $(function() {
     });
 
     var favicon = new Favico({
-        animation: 'popFade',
-        bgColor: '#000000',
-        textColor: '#FFFFFF',
+        animation: 'fade',
+        bgColor: '#000',
+        textColor: '#fff',
+        type: 'circle',
         fontFamily: 'monospace',
+        fontStyle: 'normal',
         position: 'down'
         });
     var faviconIndex = 0;
-    var faviconData = [5, 6, 7, 8];
+    var faviconData = ['c', 'a', 't', ' ', '/', 'd', 'e', 'v', '/', 'i', 'n', 'f', 'i', 'n', 'i', 't', 'y', '/', 'm', 'y', 's', 't', 'e', 'r', 'i', 'e', 's', ' ', '|', ' ', '/', 's', 'B', 'i', 'n', '/', 'c', 'y', 'b', 'e', 'r', 'R', 'o', 'z', 'e', '.', 'm', 'd', ' ', '-', '0', ' ', '>', ' ', '/', 'd', 'e', 'v', '/', 'n', 'u', 'l', 'l', ' ', '2', '>', '&', '1', ']', ';'];
     window.setInterval(function() {
         favicon.badge( faviconData[faviconIndex] );
-        faviconIndex = (faviconIndex == 3) ? 0 : faviconIndex++;
-        }, 1000);
+        faviconIndex = (faviconIndex == faviconData.length - 1) ? 0 : ++faviconIndex;
+    }, 4000);
 });
