@@ -1,1 +1,1 @@
-Sitemap: https://slashsbin.com/sitemap.xml
+Sitemap: http://slashsbin.com/sitemap.xml
