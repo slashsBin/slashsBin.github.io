@@ -178,7 +178,7 @@ $(function() {
 
     $('#core #core-context #core-container #stage').on('click', '.ring .plane', function() {
         if (undefined !== (linkURL = $(this).data('forward'))) {
-            window.open(linkURL + '?utm_source=slashsBin&utm_medium=website&utm_campaign=slashsBin');
+            window.open(linkURL + '{{ "?utm_source=slashsBin&utm_medium=website&utm_campaign=slashsBin" | cgi_escape }}');
             return false;
         }
         if (undefined !== (section = $(this).data('section'))) {

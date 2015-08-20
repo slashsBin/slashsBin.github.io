@@ -23,7 +23,7 @@ active: blog
 			<ul class="list-group">
 				{% for post in site.posts %}
 				<li class="list-group-item tt" title="{{ post.header }}" data-toggle="tooltip">
-					<img class="img-rounded" width="20" height="20" src="{{ "//www.gravatar.com/avatar/" | append: post.hash | append: "?s=20&d=identicon&f=y" | uri_escape }}" />
+					<img class="img-rounded" width="20" height="20" src="{{ "//www.gravatar.com/avatar/" | append: post.hash | append: "?s=20&d=identicon&f=y" | cgi_escape }}" />
 					<a href="{{ post.url }}/">{{ post.title }}</a>
 					<div class="badge"><span class="glyphicon glyphicon-comment"></span> <a class="white" data-disqus-identifier="{{ post.hash }}" href="{{ post.url }}/#disqus_thread">-</a></div>
 					<span class="badge"><span class="glyphicon glyphicon-time"></span> {{ post.date | date_to_string }}</span>
