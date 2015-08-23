@@ -6,7 +6,3 @@ timezone: Asia/Tehran
 permalink: /blog/:year/:month/:day/:title
 excerpt_separator: "\n\n"
 exclude: [ .DS_Store ]
-gems:
-  - jekyll-redirect-from
-  - jemoji
-  - jekyll-mentions
