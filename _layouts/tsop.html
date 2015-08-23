@@ -8,11 +8,11 @@ active: blog
 {
 	"@context": "http://schema.org",
 	"@type": "BlogPosting",
-	"headline":"{{ post.title }}",
-	"alternativeHeadline": "{{ post.header }}",
-	"url": "{{ post.url }}/",
-	"image": "{{ "http://www.gravatar.com/avatar/" | append: post.hash | append: "?s=20&d=identicon&f=y" | uri_escape }}",
-	"datePublished":"{{ post.date | date_to_xmlschema }}",
+	"headline":"{{ page.title }}",
+	"alternativeHeadline": "{{ page.header }}",
+	"url": "{{ page.url }}/",
+	"image": "{{ "http://www.gravatar.com/avatar/" | append: page.hash | append: "?s=20&d=identicon&f=y" | uri_escape }}",
+	"datePublished":"{{ page.date | date_to_xmlschema }}",
 	"inLanguage": "fa_IR"
 }
 </script>

@@ -8,18 +8,18 @@ active: blog
 {
 	"@context": "http://schema.org",
 	"@type": "BlogPosting",
-	"headline":"{{ post.title }}",
-	"alternativeHeadline": "{{ post.header }}",
-	"url": "{{ post.url }}/",
-	"image": "{{ "http://www.gravatar.com/avatar/" | append: post.hash | append: "?s=20&d=identicon&f=y" | uri_escape }}",
-	"datePublished":"{{ post.date | date_to_xmlschema }}",
+	"headline":"{{ page.title }}",
+	"alternativeHeadline": "{{ page.header }}",
+	"url": "{{ page.url }}/",
+	"image": "{{ "http://www.gravatar.com/avatar/" | append: page.hash | append: "?s=20&d=identicon&f=y" | uri_escape }}",
+	"datePublished":"{{ page.date | date_to_xmlschema }}",
 	"inLanguage": "en_US"
 }
 </script>
 <div id="content" class="container-fluid container-fluid-fixed-width post">
 	<div class="row section">
 		<div class="col-xs-12 section-container">
-                    <h2><a class="post-avatar" href="{{ page.url }}/"><img class="img-rounded" width="40" height="40" src="{{ "http://www.gravatar.com/avatar/" | append: page.hash | append: "?s=40&d=identicon&f=y" | uri_escape }}" /></a>{{ page.header }}</h2>
+            <h2><a class="post-avatar" href="{{ page.url }}/"><img class="img-rounded" width="40" height="40" src="{{ "http://www.gravatar.com/avatar/" | append: page.hash | append: "?s=40&d=identicon&f=y" | uri_escape }}" /></a>{{ page.header }}</h2>
 			<div class="row companion">
 				<div class="col-xs-2"></div>
 				<div class="col-xs-2"></div>
