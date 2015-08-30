@@ -5,5 +5,5 @@ markdown: kramdown
 timezone: Asia/Tehran
 permalink: /blog/:year/:month/:day/:title
 excerpt_separator: "\n\n"
-exclude: [ .DS_Store ]
-include: [ humans.txt ]
+exclude: [ ".DS_Store" ]
+include: [ "humans.txt" ]
