@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+  Mohammad Shokri -- Lead Developer -- @slashsbin
+
+# Site
+  Built @{{ site.time }}
+  Powered by Jekyll v{{ jekyll.version }}
+  Revision {{ site.github.build_revision }}
