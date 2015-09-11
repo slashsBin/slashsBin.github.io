@@ -1,10 +1,24 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+---
+---
+         _           _         _     _
+        | |         | |       | |   (_)
+     ___| | __ _ ___| |__  ___| |__  _ _ __
+    / __| |/ _` / __| '_ \/ __| '_ \| | '_ \
+    \__ \ | (_| \__ \ | | \__ \ |_) | | | | |
+    |___/_|\__,_|___/_| |_|___/_.__/|_|_| |_|
 
-# TEAM
-  Mohammad Shokri -- Lead Developer -- @slashsbin
+    /sBin/#!cyberRoze.md
+    Personal Website of Mohammad Shokri
+
+    cat /dev/infinity/mysteries | /sBin/cyberRoze.md -0 > /dev/null 2>&1
+
+# BOFH
+    Mohammad Shokri -- Lead Developer -- @slashsbin
 
 # Site
-  Built @{{ site.time }}
-  Powered by Jekyll v{{ jekyll.version }}
-  Revision {{ site.github.build_revision }}
+    Powered by Jekyll v{{ jekyll.version }}
+    Built @{{ site.time }}
+    Revision {{ site.github.build_revision }}
+    Demystified with C^8H^10N^4O^2 & <3
+
+01110100 01101000 01100001 01110100 01010111 01101000 01101001 01100011 01101000 01000110 01100101 01100101 01100100 01110011 01001101 01100101 01000100 01100101 01110011 01110100 01110010 01101111 01111001 01110011 01001101 01100101
