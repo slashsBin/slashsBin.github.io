@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
     animation: spinAround 2s linear infinite;
 }
 
-#content #twitteBackLog {
+#twitteBackLog {
     position: fixed;
     top: 151px;
     right: 60px;
