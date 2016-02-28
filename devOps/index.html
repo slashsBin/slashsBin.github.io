@@ -1,0 +1,195 @@
+---
+layout: default
+uri: /
+title: devOps
+active: devOps
+---
+
+<!--Content-->
+<div id="content" class="container-fluid container-fluid-fixed-width">
+	<div class="row section">
+		<div class="col-xs-12 section-container">
+			<h2>DevOps</h2>
+			<div class="row companion">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-2"></div>
+				<div class="col-xs-2"></div>
+				<div class="col-xs-2"></div>
+				<div class="col-xs-2"></div>
+				<div class="col-xs-2"></div>
+			</div>
+
+			<h3>Development & Operations</h3>
+
+			<div class="panel-group" id="devOpsAccordion" role="tablist" aria-multiselectable="true">
+				<!--Server Administration-->
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading1">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#devOpsAccordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+								<span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Server Administration
+							</a>
+						</h4>
+					</div>
+					<div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+						<ul class="list-group">
+							<li class="list-group-item">*NIX <a href="https://www.debian.org/misc/children-distros">Debian based</a>: <a href="https://wiki.debian.org/DebianWheezy">Wheezy 7</a> /
+								<a href="https://wiki.debian.org/DebianJessie">Jessie 8</a> <span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span> / <a href="http://www.ubuntu.com/server">Ubuntu Server</a></li>
+							<li class="list-group-item">Web Server: <a href="http://nginx.org/en/">NginX</a> <span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span> / Apache <a href="https://httpd.apache.org/">HttpD</a></li>
+							<li class="list-group-item">DBA: <a href="https://www.mysql.com/products/community/">MySQL CE</a> / <a href="https://mariadb.org/about/">MariaDB</a> / <a href="http://www.postgresql.org/about/">PostgreSQL</a> <span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span></li>
+							<li class="list-group-item">Linux Kernel Tuning</li>
+						</ul>
+					</div>
+				</div>
+
+				<!--PHP-->
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading4">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#devOpsAccordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+								<span class="glyphicon glyphicon-globe" aria-hidden="true"></span> PHP Stack
+							</a>
+						</h4>
+					</div>
+					<div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+						<ul class="list-group">
+							<li class="list-group-item">Install/Configure <a href="http://www.php.net/ChangeLog-5.php">PHP5</a> / <a href="http://www.php.net/ChangeLog-7.php">PHP7</a></li>
+							<li class="list-group-item">Mod_PHP + Apache <a href="https://httpd.apache.org/">HttpD</a>: PreFork MPM</li>
+							<li class="list-group-item"><span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span> PHP-FPM + <a href="http://nginx.org/en/">NginX</a>: FastCGI</li>
+							<li class="list-group-item">Remote <a href="https://xdebug.org/">XDebug</a></li>
+							<li class="list-group-item"><span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span> Secure PHP Configuration</li>
+							<li class="list-group-item"><span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span> OPCode Caching: PHP Accelerator</li>
+							<li class="list-group-item">Install/Secure <a href="https://www.phpmyadmin.net/">phpMyAdmin</a> / <a href="https://www.adminer.org/">Adminer</a></li>
+							<li class="list-group-item">Install/Configure <a href="https://getcomposer.org/">Composer</a> / <a href="http://bower.io/">Bower</a> /
+								<a href="https://phpunit.de/">PHPUnit</a></li>
+							<li class="list-group-item">Sensio <a href="https://blackfire.io/">BlackFire</a> <span class="label label-info">New</span></li>
+						</ul>
+					</div>
+				</div>
+
+				<!--W3 Perf-->
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading7">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#devOpsAccordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+								<span class="glyphicon glyphicon-scale" aria-hidden="true"></span> Web Optimization
+							</a>
+						</h4>
+					</div>
+					<div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+						<ul class="list-group">
+							<li class="list-group-item"><span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span>
+								<a href="https://www.varnish-cache.org/">Varnish-Cache</a>: HTTP Reverse Cache Proxy</li>
+							<li class="list-group-item"><a href="http://nginx.org/en/">NginX</a> as HTTP(S) Reverse Cache Proxy</li>
+							<li class="list-group-item"><a href="http://nginx.org/en/">NginX</a> HTTP(S) Load Balancer</li>
+							<li class="list-group-item"><a href="http://www.haproxy.org/">HAProxy</a>: TCP/HTTP(S) Load Balancer <span class="label label-info">New</span></li>
+							<li class="list-group-item">Tune <a href="https://www.mysql.com/products/community/">MySQL CE</a> /
+								<a href="https://www.percona.com/software/mysql-tools/percona-toolkit">Percona ToolKit</a></li>
+							<li class="list-group-item">Linux Kernel Network Tuning</li>
+							<li class="list-group-item"><a href="http://redis.io/">Redis</a></li>
+							<li class="list-group-item"><a href="http://www.memcached.org/">MemCacheD</a></li>
+							<li class="list-group-item">Apache <a href="https://jmeter.apache.org/">JMeter</a>: Stress Test</li>
+							<li class="list-group-item"><a href="https://www.cloudflare.com/">CloudFlare</a> <span class="label label-info">New</span>: Supercharge your Website</li>
+						</ul>
+					</div>
+				</div>
+
+				<!--Monitoring-->
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading5">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#devOpsAccordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+								<span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> System Monitoring
+							</a>
+						</h4>
+					</div>
+					<div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+						<ul class="list-group">
+							<li class="list-group-item"><a href="http://www.net-snmp.org/">SNMP</a> v1/2c/3: Simple Network Management Protocol</li>
+							<li class="list-group-item"><a href="http://munin-monitoring.org/">Munin</a>: Networked Resource Monitoring</li>
+							<li class="list-group-item"><span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span>
+								<a href="https://www.observium.org/">Observium</a>: Network Monitoring w/ Intuition</li>
+							<li class="list-group-item"><a href="https://newrelic.com/">New Relic</a>: APM / Browser</li>
+							<li class="list-group-item">PHP-FPM Status</li>
+							<li class="list-group-item"><a href="http://www.haproxy.org/">HAProxy</a> Status</li>
+							<li class="list-group-item"><a href="https://www.nginx.com/amplify/">NginX Amplify</a> <span class="label label-info">New</span>: Monitoring and Configuration Assistance Platform</li>
+						</ul>
+					</div>
+				</div>
+
+				<!--Backup-->
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading6">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#devOpsAccordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+								<span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> Backup
+							</a>
+						</h4>
+					</div>
+					<div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+						<ul class="list-group">
+							<li class="list-group-item">File Backup</li>
+							<li class="list-group-item"><a href="https://github.com/slashsBin/iMirror">iMirror</a>: iNotify Mirror & Sync</li>
+							<li class="list-group-item">Auto-Upload to SFTP</li>
+							<li class="list-group-item"><a href="http://www.backupexec.com/">Veritas(Norton) Backup Exec</a>: Ralus Linux Client Integration</li>
+							<li class="list-group-item">MySQL Backup</li>
+							<li class="list-group-item">PostgreSQL Backup</li>
+							<li class="list-group-item"><span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span> <a href="http://www.nongnu.org/duplicity/">Duplicity</a></li>
+							<li class="list-group-item"><a href="http://www.bacula.org/">Bacula</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!--Security-->
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading2">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#devOpsAccordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+								<span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Security
+							</a>
+						</h4>
+					</div>
+					<div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+						<ul class="list-group">
+							<li class="list-group-item">Secure <a href="http://www.openssh.com/">OpenSSH</a> Server Best Practices</li>
+							<li class="list-group-item">Passwordless <a href="http://www.openssh.com/">OpenSSH</a> Login</li>
+							<li class="list-group-item">Secure <a href="http://www.openssh.com/">OpenSSH</a> w/ <a href="https://en.wikipedia.org/wiki/Two-factor_authentication">Two-Factor Authentication</a></li>
+							<li class="list-group-item">HTTPS: TLS Setup / <a href="https://letsencrypt.org/">Let's Encrypt It</a> <span class="label label-info">New</span> /
+								<a href="http://www.issihosts.com/haveged/">HavegeD</a> Entropy</li>
+							<li class="list-group-item">WAF(Web Application FireWall): <a href="https://www.modsecurity.org/about.html">ModSecurity</a> + Apache <a href="https://httpd.apache.org/">HttpD</a> / <a
+									href="https://github.com/nbs-system/naxsi">Naxsi</a> <span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span> + <a href="http://nginx.org/en/">NginX</a></li>
+							<li class="list-group-item">Enhance Linux Security: <a href="http://wiki.apparmor.net/">AppArmor</a> <span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span> / <a href="http://selinuxproject.org/">SELinux</a></li>
+							<li class="list-group-item"><span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span>
+								<a href="http://www.fail2ban.org/">Fail2Ban</a> IDS w/ Other Services(HTTP/FTP/SSH)</li>
+							<li class="list-group-item">Host-based FireWall: <a href="https://help.ubuntu.com/community/UFW">UFW</a> <span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span> / <a href="http://www.netfilter.org/projects/iptables/index.html">IPTables</a></li>
+							<li class="list-group-item"><a href="https://www.pfsense.org/">PFSense</a> FireWall: BSD-based FireWall/Router Distribution</li>
+						</ul>
+					</div>
+				</div>
+
+				<!--Services-->
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="heading3">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#devOpsAccordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+								<span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Services
+							</a>
+						</h4>
+					</div>
+					<div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+						<ul class="list-group">
+							<li class="list-group-item"><a href="https://about.gitlab.com/">GitLab</a>: Git Server</li>
+							<li class="list-group-item"><span class="glyphicon glyphicon-ok-circle text-info" aria-hidden="true"></span>
+								<a href="http://phabricator.org/">Phabricator</a>: Software Development Platform</li>
+							<li class="list-group-item"><a href="https://www.jetbrains.com/youtrack/"> JetBrains YouTrack</a>: Issue Tracker for Development Teams</li>
+							<li class="list-group-item"><a href="https://www.discourse.org/">DisCourse</a>: Civilized Discussion <span class="label label-info">New</span></li>
+							<li class="list-group-item"><a href="http://www.mattermost.org/">MatterMost</a>: Modern Communication behind your firewall, Slack-Alternative <span class="label label-info">New</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	{% include backlog.html %}
+</div>
