@@ -1,7 +1,5 @@
 name: /sBin
 lsi: false
-highlighter: pygments
-markdown: kramdown
 timezone: Asia/Tehran
 permalink: /blog/:year/:month/:day/:title
 excerpt_separator: "\n\n"
